@@ -9,6 +9,8 @@
 
 > 复杂模式 后期编写，或者参考编写
 
+> 只有实现了基本的MVP BaseActivity和BaseFragment，可以自行实现
+
 #### 使用方式
 
 ##### Step 1. Add the JitPack repository to your build file

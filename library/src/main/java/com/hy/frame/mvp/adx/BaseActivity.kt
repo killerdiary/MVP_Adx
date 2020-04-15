@@ -14,12 +14,12 @@ import com.hy.frame.mvp.IBaseView
 abstract class BaseActivity<P : IBasePresenter> : com.hy.frame.ui.BaseActivity(), IBaseView, IBasePresenterView<P> {
     private var mPresenter: P? = null//如果当前页面逻辑简单, Presenter 可以为 null
 
-    override fun getTemplateUI(): IBaseTemplateUI {
+    override fun getTemplateUI(): IBaseTemplateUI? {
         return this
     }
 
     override fun getPresenter(): P? {
-        if (isIDestroy()) return null
+        if (isIDestroy) return null
         if (this.mPresenter == null) this.mPresenter = buildPresenter()
         return this.mPresenter
     }
